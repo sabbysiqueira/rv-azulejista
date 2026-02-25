@@ -56,7 +56,6 @@ header {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 nav a {
@@ -77,11 +76,15 @@ nav a:hover {
 
 .hero {
   position: relative;
+  height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url('img/sala1.jpeg') center/cover no-repeat;
-  padding: 160px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 0 20px;
   color: white;
 }
 
@@ -90,7 +93,7 @@ nav a:hover {
   backdrop-filter: blur(12px);
   padding: 40px;
   border-radius: 25px;
-  display: inline-block;
+  max-width: 700px;
 }
 
 .hero h1 {
@@ -111,6 +114,7 @@ nav a:hover {
   font-weight: 700;
   text-decoration: none;
   transition: 0.3s;
+  display: inline-block;
 }
 
 .btn-primary:hover {
@@ -267,15 +271,12 @@ footer {
   z-index: 9999;
 }
 
-.whatsapp-float img {
-  width: 28px;
-}
-
 /* ========================= */
 /* RESPONSIVO */
 /* ========================= */
 
 @media (max-width: 1024px) {
+
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -287,20 +288,19 @@ footer {
   .avaliacoes-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (max-width: 768px) {
 
   .hero {
-    padding: 100px 20px;
-    background-size: 140%;
-    background-position: center 30%;
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
   }
-
 
   .hero-glass {
     padding: 25px;
-    width: 100%;
   }
 
   .hero h1 {
@@ -312,4 +312,11 @@ footer {
     font-size: 15px;
   }
 
+  .cards,
+  .gallery,
+  .avaliacoes-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
+
