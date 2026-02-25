@@ -293,20 +293,23 @@ footer {
 
   .hero {
     padding: 100px 20px;
+    background-size: 140%;
+    background-position: center 30%;
+  }
+
+
+  .hero-glass {
+    padding: 25px;
+    width: 100%;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 26px;
+    line-height: 1.3;
   }
 
-  .cards,
-  .gallery,
-  .avaliacoes-grid {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    display: none;
+  .hero p {
+    font-size: 15px;
   }
 
 }
