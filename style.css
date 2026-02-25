@@ -76,16 +76,24 @@ nav a:hover {
 
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url('img/sala1.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+  padding: 60px 20px;
   color: white;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1100px;
+  width: 100%;
 }
 
 .hero-glass {
@@ -93,17 +101,11 @@ nav a:hover {
   backdrop-filter: blur(12px);
   padding: 40px;
   border-radius: 25px;
-  max-width: 700px;
+  max-width: 500px;
 }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
+.hero-info {
+  max-width: 300px;
 }
 
 .btn-primary {
@@ -294,13 +296,24 @@ footer {
 @media (max-width: 768px) {
 
   .hero {
-    height: 85vh;
-    background-size: cover;
+    min-height: 85vh;
     background-position: center;
+    background-size: cover;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
   }
 
   .hero-glass {
+    width: 100%;
     padding: 25px;
+  }
+
+  .hero-info {
+    width: 100%;
   }
 
   .hero h1 {
@@ -312,11 +325,11 @@ footer {
     font-size: 15px;
   }
 
+}
   .cards,
   .gallery,
   .avaliacoes-grid {
     grid-template-columns: 1fr;
   }
 
-}
 
