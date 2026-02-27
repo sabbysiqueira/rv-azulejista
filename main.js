@@ -71,5 +71,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+// ===============================
+// MENU MOBILE
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
+
+});
+
+// ===============================
+// SCROLL HEADER EFFECT
+// ===============================
+
+window.addEventListener("scroll", function () {
+
+  const header = document.querySelector("header");
+
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+
+});
+
+// ===============================
+// PROTEÇÃO BÁSICA CONTRA SPAM BOT
+// ===============================
+
+// Bloqueia clique automático excessivo
+let clickCount = 0;
+
+document.addEventListener("click", function () {
+  clickCount++;
+  if (clickCount > 1000) {
+    console.warn("Comportamento suspeito detectado.");
+  }
+});
+
 console.log("JS carregado");
 
