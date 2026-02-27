@@ -302,7 +302,7 @@ footer {
 
   .hero {
     min-height: 75svh;
-    background-size: 200%; 
+    background-size: 180%; 
     background-position: center 95%;
     padding: 20px;
   }
