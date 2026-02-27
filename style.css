@@ -76,7 +76,7 @@ nav a:hover {
 
 .hero {
   position: relative;
-  min-height: 100svh; /* altura real do celular */
+  min-height: 100svh; 
   background:
     linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url('img/sala1.jpeg');
@@ -258,9 +258,9 @@ footer {
   padding: 20px;
 }
 
-/* ========================= */
+
 /* WHATSAPP */
-/* ========================= */
+
 
 .whatsapp-float {
   position: fixed;
@@ -278,9 +278,9 @@ footer {
 }
 
 
-/* ========================= */
+
 /* RESPONSIVO */
-/* ========================= */
+
 
 @media (max-width: 1024px) {
 
@@ -302,7 +302,7 @@ footer {
 
   .hero {
     min-height: 75svh;
-    background-size: 300%;   /* AQUI É O ZOOM REAL */
+    background-size: 200%; 
     background-position: center 95%;
     padding: 20px;
   }
