@@ -334,7 +334,42 @@ footer {
   .gallery,
   .avaliacoes-grid {
     grid-template-columns: 1fr;
+
+
   }
+
+  /* MENU MOBILE */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
 
 }
 
